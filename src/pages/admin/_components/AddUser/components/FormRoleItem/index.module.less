@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.roleItem {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #C6D5E3;
+  background: #F8FAFC;
+  width: 200px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 16px;
+
+  :global {
+    .ant-checkbox .ant-checkbox-inner {
+      border-radius: 50%;
+    }
+  }
+
+  &.active {
+    border-color: var(--mint-color-primary);
+  }
+
+  .roleName {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .roleWork {
+    color: #43566B;
+
+    > span {
+      ~ span {
+          margin-left: 6px;
+      }
+      &::before {
+        content: '•';
+      }
+    }
+  }
+}

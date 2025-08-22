@@ -1,0 +1,31 @@
+
+.go-back {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  line-height: 32px;
+  color: #90A4BA;
+  cursor: pointer;
+  &:hover {
+    color: var(--mint-color-primary);
+    .icon-wrapper {
+      background-color: var(--mint-color-primary);
+      border: 1px solid var(--mint-color-primary);
+      color: #fff;
+    }
+  }
+}
+.icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #C6D5E3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1B293D;
+  background-color: #FAFAFA;
+}
+.label {
+  margin-left: 8px;
+}

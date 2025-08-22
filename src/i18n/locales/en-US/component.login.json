@@ -1,0 +1,60 @@
+{
+  "title": {
+    "signin": "Sign In",
+    "register": "Sign Up",
+    "forgetPassword": "Forgot password",
+    "resetPassword": "Reset Password",
+    "2FA": "Two-Factor Verification"
+  }, 
+  "tips": {
+    "forgetPassword": "Forgot password",
+    "noAccount": "Not a member?",
+    "register": "Sign Up",
+    "have-accounts": "Already have an account?",
+    "signin": "Log in",
+    "password-not-same": "password not same"
+  },
+  "fields": {
+    "region": "Country or District",
+    "account": "Account",
+    "email": "Email",
+    "password": "Password",
+    "set-password": "Set Password",
+    "confirm-password": "Confirm New Password",
+    "new-password": "New password",
+    "verify-code": "Verification Code",
+    "sendEmail": "Email Code will be sent to {{ email }}"
+  },
+  "placeholder": {
+    "region": "Country or District",
+    "account": "Enter your Email",
+    "password": "Enter Password",
+    "set-password": "Set Password",
+    "new-password": "Enter a new Password",
+    "confirm-password":"Confirm the new Password",
+    "verify-code": "Verification Code"
+  },
+  "message": {
+    "login-success": "Sign in Success",
+    "reset-sucess": "Reset Password Success",
+    "register-success": "Congratulations! Your registration has been successful."
+  },
+  "button": {
+    "signin": "Sign In",
+    "2fa": "Confirm",
+    "register": "Sign Up",
+    "next": "Next",
+    "reset-password": "Reset Password"
+  },
+  "agreement": {
+    "privacy": "Privacy Policy",
+    "user-condition": "Terms & Conditions",
+    "agreed": "I hereby confirm that I have read and agree to the ",
+    "and": " and ",
+    "ofIPN": " of IPN."
+  },
+  "footer": {
+    "privacy": "USDI Exchange Service Agreement",
+    "user-condition": "Term Of Service"
+  }
+}

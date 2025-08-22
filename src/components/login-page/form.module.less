@@ -1,0 +1,78 @@
+.with-actions {
+  >label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &::after {
+      content: none !important;
+    }
+    :global {
+      .ant-typography {
+        font-size: inherit;
+      }
+    }
+  }
+
+}
+
+.nav-back {
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+
+.form-title {
+  text-align: center;
+  margin: 60px auto 40px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #1B293D;
+}
+
+.sub-button {
+  color: #43566B;
+  > a {
+    color: #0468FC;
+  }
+  &:hover {
+    color: #43566B !important;
+    background: rgba(0, 106, 255, 0.06) !important;
+    border-color: #C6D5E3 !important;
+  }
+}
+
+.agreement {
+  :global {
+    .ant-checkbox {
+      position: relative;
+      top: 3px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.captcha {
+  :global {
+    .ant-form-item-control-input-content {
+      border-radius: 8px !important;
+      background: #FAFAFA;
+      &:hover {
+        border-color: var(--mint-color-primary);
+      }
+      //&:has( input:focus) {
+      //  border-color: var(--mint-color-primary);
+      //  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.65);
+      //}
+    }
+  }
+
+  .input {
+    background-color: #FAFAFA !important;
+  }
+  .button {
+    background-color: #FAFAFA !important;
+  }
+}

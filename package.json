@@ -1,0 +1,55 @@
+{
+  "name": "social-app-admin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.1",
+    "@ant-design/pro-components": "^2.8.1",
+    "@generouted/react-router": "^1.19.9",
+    "@inquirer/prompts": "^7.1.0",
+    "@types/lodash": "^4.17.13",
+    "ahooks": "^3.8.1",
+    "antd": "^5.22.0",
+    "axios": "^1.7.7",
+    "big.js": "^6.2.2",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "dompurify": "^3.2.6",
+    "file-saver": "^2.0.5",
+    "format-num": "^1.2.0",
+    "i18next": "^23.16.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "immer": "^10.1.1",
+    "lodash": "^4.17.21",
+    "quill": "^2.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.1",
+    "react-pdf": "^9.2.1",
+    "unocss": "^0.64.1",
+    "vite-plugin-static-copy": "^2.2.0",
+    "vite-plugin-svgr": "^4.3.0",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "globals": "^15.11.0",
+    "less": "^4.2.0",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10"
+  },
+  "volta": {
+    "node": "22.11.0",
+    "npm": "10.9.0"
+  }
+}
