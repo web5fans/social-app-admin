@@ -1,0 +1,7 @@
+{
+  "message": {
+    "success": "Verification Code sent"
+  },
+  "send": "Send",
+  "retry": "Retry"
+}

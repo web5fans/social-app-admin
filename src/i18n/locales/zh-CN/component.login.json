@@ -1,0 +1,60 @@
+{
+  "title": {
+    "signin": "登录",
+    "register": "注册",
+    "forgetPassword": "忘记密码",
+    "resetPassword": "重置密码",
+    "2FA": "双重验证"
+  }, 
+  "tips": {
+    "forgetPassword": "忘记密码",
+    "noAccount": "还没有账号?",
+    "register": "立即注册",
+    "have-accounts": "已有账号?",
+    "signin": "立即登录",
+    "password-not-same": "密码不一致"
+  },
+  "fields": {
+    "region": "地区",
+    "account": "账号",
+    "email": "电子邮箱",
+    "password": "密码",
+    "set-password": "密码",
+    "new-password": "新密码",
+    "confirm-password": "确认新密码",
+    "verify-code": "验证码",
+    "sendEmail": "验证码将发至邮箱{{ email }}"
+  },
+  "placeholder": {
+    "region": "请选择您所在地区",
+    "account": "请输入电子邮箱",
+    "password": "请输入密码",
+    "set-password": "请输入密码",
+    "verify-code": "请输入验证码",
+    "new-password": "请输入新密码",
+    "confirm-password": "确认新密码"
+  },
+  "message": {
+    "login-success": "登录成功",
+    "reset-sucess": "重置成功",
+    "register-success": "注册成功"
+  },
+  "button": {
+    "signin": "登录",
+    "2fa": "登录",
+    "register": "注册",
+    "next": "下一步",
+    "reset-password": "重置密码"
+  },
+  "agreement": {
+    "privacy": "兑换服务协议",
+    "user-condition": "用户协议",
+    "agreed": "我已阅读并同意",
+    "and": "和" ,
+    "ofIPN": ""
+  },
+  "footer": {
+    "privacy": "兑换服务协议",
+    "user-condition": "用户协议"
+  }
+}

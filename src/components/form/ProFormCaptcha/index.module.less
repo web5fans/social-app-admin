@@ -1,0 +1,28 @@
+
+.styled-captcha {
+  
+  :global {
+    .ant-form-item-control-input-content {
+      border: 1px solid #C6D5E3;
+      border-radius: 2px;
+      &:hover {
+        border-color: var(--mint-color-primary);
+      }
+    }
+  }
+  .input {
+    background-color: #fff;
+    margin-right: 0 !important;
+  }
+  .button {
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+    &:not(:disabled) {
+      color: #0468FC !important;
+    }
+    &:disabled {
+      background-color: #fff !important;
+    }
+  }
+}

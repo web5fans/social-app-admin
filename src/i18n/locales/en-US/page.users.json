@@ -1,0 +1,23 @@
+{
+  "title": "Users",
+  "column": {
+    "role": "Role",
+    "email": "Email",
+    "option": "Option",
+    "delete": "Delete"
+  },
+  "headerTitle": "List",
+  "add": "New",
+  "modal": {
+    "title": "Add account",
+    "formTitle": "Send an Invitation",
+    "label": {
+      "email": "Email"
+    },
+    "submit": "Submit"
+  },
+  "role": {
+    "admin": "admin",
+    "super": "Super Administrator"
+  }
+}

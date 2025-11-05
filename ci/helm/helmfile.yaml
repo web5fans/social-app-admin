@@ -1,0 +1,23 @@
+environments:
+  development:
+  staging:
+
+---
+
+repositories:
+  - name: xiangjiandao
+    url: https://registry.devops.rivtower.com/chartrepo/xiangjiandao
+    username: {{ requiredEnv "RIVTOWER_REGISTRY_USERNAME" }}
+    password: {{ requiredEnv "RIVTOWER_REGISTRY_PASSWORD" }}
+
+helmDefaults:
+  wait: true
+  timeout: 600
+
+releases:
+  - name: social-app-admin
+    namespace: xiangjiandao
+    chart: xiangjiandao/social-app-admin
+    version: {{ requiredEnv "VERSION_NUMBER" }}
+    values:
+      - ./values/{{ .Environment.Name }}.yaml

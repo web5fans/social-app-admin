@@ -1,0 +1,111 @@
+.layout {
+  min-width: 800px;
+  .switch-icon {
+    display: none;
+    &.normal {
+      display: block;
+    }
+  }
+  :global {
+    .ant-pro-global-header {
+      margin-inline: 16px;
+    }
+    .ant-pro-layout-bg-list {
+      background: transparent;
+    }
+
+    .ant-layout-sider.ant-pro-sider {
+      background-color: #FFFFFF;
+    }
+
+    .ant-layout-header.ant-pro-layout-header {
+      border-block-end: none;
+      background-color: #FFFFFF;
+    }
+
+    .ant-layout-sider .ant-layout-sider-children {
+      border-inline-end: none;
+      padding-inline: 16px;
+      margin-inline-end: 0;
+    }
+    .ant-pro-base-menu-inline-item-icon {
+      line-height: 0;
+    }
+
+    .ant-pro-global-header-logo {
+      h1 {
+        color: #000;
+      }
+      img {
+        height: 18px !important;
+      }
+    }
+    
+  }
+}
+
+.menu {
+  :global {
+    .ant-menu-item:hover,
+    .ant-menu-item-selected {
+      background-color: rgba(0, 106, 255, 0.05) !important;
+      font-weight: 500;
+      border-radius: 8px;
+      .ant-pro-base-menu-inline-item-text {
+        color: var(--mint-color-primary)
+      }
+    }
+
+    .ant-menu-item:hover,
+    .ant-menu-item-selected,
+    .ant-menu-submenu-selected {
+      :local(.switch-icon.normal) {
+        display: none;
+      }
+      :local(.switch-icon.active) {
+        display: block;
+      }
+    }
+
+    .ant-menu-submenu,
+    .ant-menu-submenu-title,
+    .ant-menu-item {
+      margin-left: 0;
+      margin-right: 0;
+      color: #6F869F;
+      border-radius: 8px;
+    }
+
+    .ant-menu-submenu .ant-menu-item {
+      margin-inline: 4px;
+    }
+
+    .ant-menu-submenu-arrow {
+      right: 0;
+    }
+
+    .ant-menu-submenu-title,
+    .ant-menu-item {
+      height: 48px;
+      padding-left: 16px !important;
+    }
+
+    .ant-menu-sub .ant-menu-item {
+      padding-left: 36px !important;
+    }
+
+    .ant-menu-submenu-selected {
+      background: rgba(0, 106, 255, 0.02);
+
+      .ant-menu-item-selected {
+        margin-inline: 4px;
+        padding-left: 36px !important;
+      }
+    }
+
+    .ant-menu-submenu-selected >.ant-menu-submenu-title {
+      color: #42576C;
+      font-weight: 500;
+    }
+  }
+}

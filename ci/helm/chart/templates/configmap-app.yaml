@@ -1,0 +1,15 @@
+{{- if .Values.app.config.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "ipn-fe.fullname" . }}-app-config
+  labels:
+    app: {{ template "ipn-fe.name" $ }}
+    chart: {{ template "ipn-fe.chart" $ }}
+    release: "{{ $.Release.Name }}"
+    heritage: "{{ $.Release.Service }}"
+data:
+  app.conf: |-
+    {{ .Values.app.config.configMapData | nindent 4 }}
+
+{{- end -}}

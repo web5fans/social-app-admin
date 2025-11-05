@@ -1,0 +1,36 @@
+.lan-picker {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C6D5E3;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--mint-color-primary);
+    color: #fff;
+    border-color: var(--mint-color-primary);
+  }
+}
+.overlay {
+  :global {
+    .ant-popover-inner {
+      padding: 8px;
+      border: 1px solid #C6D5E3;
+      box-shadow: none;
+    }
+  }
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 72px;
+    cursor: pointer;
+    line-height: 22px;
+    align-items: center;
+    ~ .tab {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.wrap {
+  background: white;
+  margin-top: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .contents {
+    border: 1px solid #D4DBE2;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .title {
+      padding: 16px;
+      display: flex;
+      align-content: center;
+
+      .label {
+        color: #0B0F14;
+        font-family: "PingFang SC";
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .input {
+        flex: 1;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        color: #0B0F14;
+        font-family: "PingFang SC";
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    :global {
+      .ql-toolbar {
+        border-left: none;
+        border-right: none;
+        border-color: #D4DBE2;
+        background-color: #F1F3F5;
+      }
+
+      .ql-container {
+        border: none;
+        flex: 1;
+        display: grid;
+      }
+    }
+  }
+}

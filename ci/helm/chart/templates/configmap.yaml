@@ -1,0 +1,45 @@
+{{- if .Values.configMapEnabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "ipn-fe.fullname" . }}-server-config
+  labels:
+    app: {{ template "ipn-fe.name" $ }}
+    chart: {{ template "ipn-fe.chart" $ }}
+    release: "{{ $.Release.Name }}"
+    heritage: "{{ $.Release.Service }}"
+data:
+  default.conf: |-
+    types {
+      application/javascript    js mjs;
+    }
+
+    server {
+        listen 80;
+        client_max_body_size 30M;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-real-ip $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        gzip on;
+        gzip_min_length 1k;
+        gzip_comp_level 9;
+        gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+        gzip_vary on;
+        gzip_disable "MSIE [1-6]\.";
+        #auth_basic "login";
+        #auth_basic_user_file /password;
+        root /usr/share/nginx/html;
+
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+            try_files $uri $uri/ /index.html;
+        }
+        location /actuator/health {
+            default_type application/json;
+            return 200 '{"status":"UP","groups":["liveness","readiness"]}';
+        }
+    }
+
+{{- end -}}

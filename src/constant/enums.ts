@@ -1,0 +1,20 @@
+export enum DOB_TYPE {
+  UN_KNOW,
+  SINGLE,
+  SERIES,
+  BLIND_BOX
+}
+
+export enum DOB_STATUS_CODE  {
+  UNKNOWN,
+  COMING_SOON,
+  OPEN,
+  CLOSED
+}
+
+export enum DOB_DATA_TYPE  {
+  UN_KNOW,
+  PICTURE,
+  LINK,
+  CONTENT_JSON
+}

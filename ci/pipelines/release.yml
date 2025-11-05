@@ -1,0 +1,13 @@
+variables:
+  # 版本号，默认取流水线ID
+  VERSION_NUMBER: ""
+  # 镜像tag: release-x.x.x
+  IMAGE_TAG: ""
+
+before_script:
+  - VERSION_NUMBER=$(echo $CI_COMMIT_REF_NAME | cut -d'-' -f2)
+  - IMAGE_TAG="release-$VERSION_NUMBER"
+  - IMAGE_NAME="$RIVTOWER_REGISTRY_ADDRESS/web5/social-app-admin"
+
+include:
+  - local: 'ci/pipelines/common.yml'

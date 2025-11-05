@@ -1,0 +1,134 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #FFFFFF;
+}
+
+// 236 *   
+.left {
+  // @marginHeight: 155 + 200 + 110;
+  // @contentHeight: 48 + 27 + 40 + 541;
+  background: url(/assets/login-bg.png) no-repeat center center/cover;
+  flex: none;
+  height: 100%;
+
+  // width: 62.5vh;
+  width: 34.7vw;
+  // background: #FFDB11;
+  overflow: hidden;
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .slogan {
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #1083FE;
+    padding-left: 10.8%;
+    // color: #1A1A1A;
+    // font-family: Montserrat;
+    // font-size: 20px;
+    // font-style: normal;
+    // font-weight: 700;
+    // line-height: normal;
+    // position: relative;
+    // margin-left: 49px;
+
+    .sub-slogan {
+      font-family: PingFang SC;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0px;
+      color: #3B6793;
+      padding-left: 4px;
+    }
+
+  }
+
+  .bgImg {
+    flex: none;
+    // margin-top: (200/ 1080 * 100vh);
+    width: 441px;
+    height: 515px;
+    margin-left: 21px;
+    // 498∶541
+  }
+}
+
+.right {
+  flex: 1;
+  height: 100%;
+  padding-top: 12vh;
+  overflow: auto;
+  box-sizing: border-box;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  .content {
+    position: relative;
+    min-height: 100%;
+  }
+
+  .footer {
+    &Shadow {
+      height: 23px + 26px + 44px;
+    }
+
+    position: absolute;
+    // bottom: 3.7vh;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    // width: 250px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(144, 164, 186, 1);
+
+    .link {
+      color: inherit;
+
+      &:hover {
+        color: var(--mint-color-primary)
+      }
+    }
+  }
+}
+
+.main-form {
+  position: relative;
+  margin: 0 auto;
+  // min-height: 700px;
+  width: 430px;
+
+  :global {
+    .ant-form-item-explain-error {
+      height: 40px;
+    }
+
+    .ant-form-item-label>label {
+      color: #43566B;
+    }
+  }
+
+  .top-actions {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}

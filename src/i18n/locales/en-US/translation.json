@@ -1,0 +1,77 @@
+{
+  "submit": "Submit",
+  "address": "Address",
+  "copy": {
+    "copy": "Click to copy",
+    "copied": "Copied"
+  },
+  "common": {
+    "back": "Back",
+    "logout": "Log out",
+    "change_password": "Change Password",
+    "upload": "Upload",
+    "uploadFile": "Upload File"
+  },
+  "nav": {
+    "dob": {
+      "name": "Bescard",
+      "series": "Series",
+      "blindBox": "Blind Box"
+    },
+    "user": "Users",
+    "order": {
+      "name": "Orders",
+      "purchase": "Purchase",
+      "redeem": "Redeem"
+    },
+    "setup": {
+      "name": "Setup",
+      "card": "Home Picks",
+      "pcBanner": "PC Banner",
+      "h5Banner": "H5 Banner",
+      "sorting": "Bescard sorting"
+    },
+    "agent": {
+      "name": "Agent",
+      "status": "Status",
+      "token": "Token"
+    },
+    "platform": {
+      "name": "Platform Setting",
+      "receive": "Receivable Account",
+      "pay": "Payment Account"
+    },
+    "withdrawal": {
+      "name": "Withdrawal",
+      "order": "Orders",
+      "whiteList": "WhiteList"
+
+    }
+  },
+  "validate": {
+    "maxFileSize": "Each File size must be less than {{size}}"
+  },
+  "footer": {
+    "text": "Need help? Feel free to contact us at "
+  },
+  "enum": {
+    "idCardType": {
+      "passport": "Passport",
+      "IDCard": "IDCard",
+      "companyLicense": "Company License"
+    },
+    "directorType": {
+      "chairman": "Chairman",
+      "director": "Director",
+      "supervisor": "Supervisor"
+    },
+    "beneficiaryType": {
+      "legal": "Legal Person",
+      "natural": "Natural Person"
+    }
+  },
+  "auth-state": {
+    "unAuth": "Unverified",
+    "pass": "Verified"
+  }
+}
