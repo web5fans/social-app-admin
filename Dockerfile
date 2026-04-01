@@ -1,2 +1,2 @@
-FROM registry.devops.rivtower.com/library/nginx:alpine-amd64
+FROM nginx:alpine
 COPY dist /usr/share/nginx/html

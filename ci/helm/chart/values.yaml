@@ -5,12 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: registry.devops.rivtower.com/xiangjiandao/social-app-admin
-
+  repository: ghcr.io/xjdao2025/social-app-admin
   pullPolicy: IfNotPresent
 
-imagePullSecrets:
-  - name: rivtower-docker-registry
 
 nameOverride: ""
 fullnameOverride: ""
@@ -32,18 +29,16 @@ app:
 
 ingress:
   enabled: false
-  className: rivdap
+  className: xiangjiandao
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
     hosts:
-      - host: xiangjiandao-admin.rivtower.cc
+      - host: xjdao.xyz
         paths:
           - path: /
             pathType: ImplementationSpecific
-    #- api.rivtower.xyz
-    #- api.rivdap.cn
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

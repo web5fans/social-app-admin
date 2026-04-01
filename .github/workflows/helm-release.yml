@@ -1,0 +1,66 @@
+name: Release Helm Chart
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Chart version (latest or v* version)'
+        required: true
+        default: 'latest'
+        type: string
+
+env:
+  REGISTRY: ghcr.io
+  USERNAME: ${{ github.actor }}
+  PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+  CHART_NAME: social-app-admin
+
+jobs:
+  release-helm:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ startsWith(inputs.tag, 'v') && inputs.tag || 'main' }}
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: '3.14.0'
+
+      - name: Determine version
+        id: version
+        run: |
+          if [[ "${{ inputs.tag }}" == latest ]]; then
+            # Helm chart version must be semver, use 0.0.0-latest format
+            VERSION="0.0.0-latest"
+            APP_VERSION="latest"
+          elif [[ "${{ inputs.tag }}" == v* ]]; then
+            VERSION="${{ inputs.tag }}"
+            APP_VERSION="${{ inputs.tag }}"
+          else
+            VERSION="${{ inputs.tag }}"
+            APP_VERSION="${{ inputs.tag }}"
+          fi
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          echo "APP_VERSION=${APP_VERSION}" >> $GITHUB_OUTPUT
+          echo "Chart version: ${VERSION}, App version: ${APP_VERSION}"
+
+      - name: Log in to Container Registry
+        run: |
+          echo "${{ env.PASSWORD }}" | helm registry login ${{ env.REGISTRY }} -u ${{ env.USERNAME }} --password-stdin
+
+      - name: Package Helm Chart
+        run: |
+          helm package ci/helm/chart \
+            --version ${{ steps.version.outputs.VERSION }} \
+            --app-version ${{ steps.version.outputs.APP_VERSION }}
+
+      - name: Push Helm Chart to GHCR
+        run: |
+          helm push ${{ env.CHART_NAME }}-${{ steps.version.outputs.VERSION }}.tgz \
+            oci://${{ env.REGISTRY }}/${{ github.repository_owner }}/charts
